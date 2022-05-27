@@ -14,7 +14,6 @@ function Login () {
 		<div className="register">
 			<h1>Expense Tracker Login</h1>
 			<div className="row justify-content-center align-items-center w-100 h-100">
-
         <div className="col-md-4">
           <Form layout="vertical" onFinish={onFinish}>
             <h1>Login</h1>
@@ -32,13 +31,12 @@ function Login () {
             </div>
           </Form>
         </div>
-
 				<div className="col-md-5">
-					<div className="lottie">
+					<div className="lottie-2">
 						<lottie-player
-							src="https://assets3.lottiefiles.com/packages/lf20_xx9zron9.json"
+							src="https://assets3.lottiefiles.com/packages/lf20_ystsffqy.json"
 							background="transparent"
-							speed="1"
+							speed=".75"
 							loop
 							autoplay
 						  ></lottie-player>
