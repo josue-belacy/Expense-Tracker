@@ -12,7 +12,7 @@ function Login () {
 
 	return (
 		<div className="register">
-			<h1>Expense Tracker Login</h1>
+			{/* <h1>Expense Tracker Login</h1> */}
 			<div className="row justify-content-center align-items-center w-100 h-100">
         <div className="col-md-4">
           <Form layout="vertical" onFinish={onFinish}>
@@ -36,7 +36,7 @@ function Login () {
 						<lottie-player
 							src="https://assets3.lottiefiles.com/packages/lf20_ystsffqy.json"
 							background="transparent"
-							speed=".75"
+							speed="1"
 							loop
 							autoplay
 						  ></lottie-player>
