@@ -1,11 +1,7 @@
 const express = require('express');
 const dbConnect = require('./dbConnect');
 const app = express();
-app.use('express.json'())
-const userRoute = require('./routes/usersRoute')
-
-app.use('/api/users/' , userRoute)
-
 const port = 5002;
 
+app.get('/', (req, res) => res.send('Hello world!'));
 app.listen(port, () => console.log(`Node JS server started at port ${port}!`));

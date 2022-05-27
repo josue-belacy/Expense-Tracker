@@ -12,7 +12,7 @@ function Register () {
 
 	return (
 		<div className="register">
-			{/* <h1>Expense Tracker Registration</h1> */}
+			<h1>Expense Tracker Registration</h1>
 			<div className="row justify-content-center align-items-center w-100 h-100">
 				<div className="col-md-5">
 					<div className="lottie">
