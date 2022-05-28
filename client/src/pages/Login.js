@@ -12,7 +12,7 @@ function Login () {
 
 	return (
 		<div className="register">
-			<h1>Expense Tracker Login</h1>
+      
 			<div className="row justify-content-center align-items-center w-100 h-100">
         <div className="col-md-4">
           <Form layout="vertical" onFinish={onFinish}>
