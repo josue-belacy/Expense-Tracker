@@ -1,13 +1,19 @@
-import { Form } from "antd";
+import { Form, message } from "antd";
 import Input from "antd/lib/input/Input";
 import React from "react";
 import { Link } from "react-router-dom";
 import '../resources/authentication.css'
+import axios from "axios";
 
 function Register () {
 
-	const onFinish = (values)=> {
-		console.log(values)
+	const onFinish = async(values)=> {
+    try {
+      await axios.post('/api/users/register', values)
+      message.success('Registration Successful')
+    } catch (error) {
+      message.error('Something went wrong')
+    }
 	}
 
 	return (
@@ -36,7 +42,7 @@ function Register () {
               <Input />
             </Form.Item>
             <Form.Item label="Password" name="password">
-              <Input type="password" />
+            <Input type="password" />
             </Form.Item>
 
             <div className="d-flex justify-content-between align-items-center">

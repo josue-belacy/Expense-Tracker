@@ -1,18 +1,26 @@
-import { Form } from "antd";
+import { Form, message } from "antd";
 import Input from "antd/lib/input/Input";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import '../resources/authentication.css'
+import axios from "axios";
+import Password from "antd/lib/input/Password";
 
 function Login () {
-
-	const onFinish = (values)=> {
-		console.log(values)
+  const navigate = useNavigate()
+	const onFinish = async(values)=> {
+    try {
+      const response = await axios.post("/api/users/login", values)
+      localStorage.setItem('expense-tracker-user' , JSON.stringify({...response.data , password:''})); 
+      message.success('Login successful')
+      navigate('/')
+    } catch (error) {
+      message.error('Login failed')
+    }
 	}
 
 	return (
 		<div className="register">
-      
 			<div className="row justify-content-center align-items-center w-100 h-100">
         <div className="col-md-4">
           <Form layout="vertical" onFinish={onFinish}>
