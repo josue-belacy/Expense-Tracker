@@ -2,7 +2,7 @@ const express = require("express");
 const User = require("../models/User");
 const router = express.Router();
 
-router.post("/login", async function (req, res) {
+router.post('/login', async function (req, res) {
   try {
     const result = await User.findOne({
       email: req.body.email,
