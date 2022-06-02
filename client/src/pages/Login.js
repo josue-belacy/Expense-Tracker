@@ -4,7 +4,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import '../resources/authentication.css'
 import axios from "axios";
-import Password from "antd/lib/input/Password";
+// import Password from "antd/lib/input/Password";
 
 function Login () {
   const navigate = useNavigate()
